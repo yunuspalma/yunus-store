@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUNUS Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="app-title">YUNUS Store</h1>
+            <div class="search-wrapper">
+                <input type="text" class="search-input" placeholder="🔍 Cari aplikasi...">
+            </div>
+        </header>
+
+        <!-- Kategori -->
+        <nav class="category-nav">
+            <button class="category-btn active" data-category="semua">Semua</button>
+            <button class="category-btn" data-category="hiburan">Hiburan</button>
+            <button class="category-btn" data-category="musik">Musik</button>
+            <button class="category-btn" data-category="games">Games</button>
+            <button class="category-btn" data-category="tv-online">Tv Online</button>
+        </nav>
+
+        <!-- Daftar Aplikasi -->
+        <main class="apps-container">
+            <div class="apps-grid" id="appsGrid">
+                <!-- Aplikasi 1: OttNavigator -->
+                <div class="app-card" data-category="tv-online">
+                    <div class="app-icon-box">
+                        <span class="icon-text">N<br><small>OTT</small></span>
+                    </div>
+                    <div class="app-info">
+                        <h3 class="app-name">OttNavigator</h3>
+                        <p class="app-type">Tv Online</p>
+                        <p class="app-version">Versi: 1.7.5.1</p>
+                    </div>
+                    <a href="https://github.com/yunuspalma/apk/raw/refs/heads/main/OTT%20Navigator.apk" target="_blank" class="install-button-link">Pasang</a>
+                    <p class="update-info">📅 Update: 17/11/2026</p>
+                    <p class="quick-guide">💡 Setelah unduh selesai → ketuk notifikasi → Pasang</p>
+                </div>
+
+                <!-- Aplikasi 2: FilmKu -->
+                <div class="app-card" data-category="hiburan">
+                    <div class="app-icon-box">
+                        <span class="icon-text">🎬</span>
+                    </div>
+                    <div class="app-info">
+                        <h3 class="app-name">FilmKu</h3>
+                        <p class="app-type">Hiburan</p>
+                        <p class="app-version">Versi: 2.1.0</p>
+                    </div>
+                    <a href="https://link-kamu-disini.apk" target="_blank" class="install-button-link">Pasang</a>
+                    <p class="update-info">📅 Update: 15/11/2026</p>
+                    <p class="quick-guide">💡 Setelah unduh selesai → ketuk notifikasi → Pasang</p>
+                </div>
+
+                <!-- Aplikasi 3: MusikPedia -->
+                <div class="app-card" data-category="musik">
+                    <div class="app-icon-box">
+                        <span class="icon-text">🎵</span>
+                    </div>
+                    <div class="app-info">
+                        <h3 class="app-name">MusikPedia</h3>
+                        <p class="app-type">Musik</p>
+                        <p class="app-version">Versi: 1.3.2</p>
+                    </div>
+                    <a href="https://link-kamu-disini.apk" target="_blank" class="install-button-link">Pasang</a>
+                    <p class="update-info">📅 Update: 10/11/2026</p>
+                    <p class="quick-guide">💡 Setelah unduh selesai → ketuk notifikasi → Pasang</p>
+                </div>
+
+                <!-- Aplikasi 4: GameZone -->
+                <div class="app-card" data-category="games">
+                    <div class="app-icon-box">
+                        <span class="icon-text">🎮</span>
+                    </div>
+                    <div class="app-info">
+                        <h3 class="app-name">GameZone</h3>
+                        <p class="app-type">Games</p>
+                        <p class="app-version">Versi: 3.0.1</p>
+                    </div>
+                    <a href="https://link-kamu-disini.apk" target="_blank" class="install-button-link">Pasang</a>
+                    <p class="update-info">📅 Update: 08/11/2026</p>
+                    <p class="quick-guide">💡 Setelah unduh selesai → ketuk notifikasi → Pasang</p>
+                </div>
+
+                <!-- Kartu Kosong -->
+                <div class="app-card empty-card">
+                    <div class="empty-space"></div>
+                    <button class="install-button">Pasang</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>© 2026 YUNUS Store | Pontianak, Kalimantan Barat</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+/* ============== PENGATURAN UMUM ============== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+:root {
+    --warna-utama: #00e5ff;
+    --warna-latar: #000000;
+    --warna-kartu: #1a1a1a;
+    --warna-abu: #333333;
+    --warna-teks: #ffffff;
+    --warna-teks-kedua: #e0e0e0;
+    --bayangan: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background-color: var(--warna-latar);
+    color: var(--warna-teks);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ============== HEADER ============== */
+.header {
+    margin-bottom: 30px;
+}
+
+.app-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+.search-wrapper {
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 16px 22px;
+    background-color: var(--warna-abu);
+    border: 1px solid #444444;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 18px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: #aaaaaa;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.5);
+    border-color: var(--warna-utama);
+}
+
+/* ============== KATEGORI ============== */
+.category-nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.category-btn {
+    padding: 14px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--warna-abu);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #444444;
+}
+
+.category-btn.active {
+    background-color: var(--warna-utama);
+    color: #000000;
+    font-weight: 600;
+    box-shadow: var(--bayangan);
+}
+
+/* ============== DAFTAR APLIKASI ============== */
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.app-card {
+    background-color: var(--warna-kartu);
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: var(--bayangan);
+    transition: transform 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-3px);
+    border-color: #444444;
+}
+
+.empty-card {
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 220px;
+}
+
+.empty-space {
+    flex-grow: 1;
+}
+
+.app-icon-box {
+    width: 64px;
+    height: 64px;
+    background-color: #222222;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 1px solid #333333;
+}
+
+.icon-text small {
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.app-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.app-type {
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 2px;
+}
+
+.app-version {
+    font-size: 12px;
+    color: #999999;
+}
+
+.install-button,
+.install-button-link {
+    background-color: var(--warna-utama);
+    color: #000000;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.install-button:hover,
+.install-button-link:hover {
+    background-color: #00cfd8;
+    transform: scale(1.02);
+}
+
+.update-info {
+    font-size: 11px;
+    color: #777777;
+}
+
+.quick-guide {
+    font-size: 10px;
+    color: #888888;
+    text-align: center;
+    margin-top: 2px;
+    line-height: 1.4;
+}
+
+/* ============== FOOTER ============== */
+.app-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #666666;
+    font-size: 14px;
+}
+
+/* ============== RESPONSIF ============== */
+@media (max-width: 1024px) {
+    .category-nav,
+    .apps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .app-title {
+        font-size: 32px;
+    }
+    .category-nav,
+    .apps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .category-nav,
+    .apps-grid {
+        grid-template-columns: 1fr;
+    }
+}
